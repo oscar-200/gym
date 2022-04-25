@@ -1,0 +1,295 @@
+.window_panel {
+    background: rgb(0, 0, 0);
+
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+    left: 5%;
+    padding: 33px;
+    padding-top: 0;
+    height: 84%;
+    z-index: 1100;
+    top: 12vh;
+}
+
+
+
+.panel {
+    background: rgb(0, 0, 0);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+    /*min-width: 600px;*/
+    z-index: 1100;
+    border: 2px solid white;
+}
+
+
+.panel__item {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 23px;
+}
+
+.form-regis {
+    background: rgb(15, 15, 15);
+    padding: 3px;
+    top: 250px;
+    right: 85px;
+    width: 30%;
+    height: 100%;
+}
+
+.panel__options {
+    width: 100%;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+
+
+}
+
+.panel__options_item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 235px;
+    padding-top: 50px;
+
+}
+
+.panel__options_item a {
+    font-size: 20px;
+    cursor: pointer;
+    width: 100%;
+    border: 1px solid white;
+    padding: 5px;
+    color: black;
+}
+
+
+.input_item textarea {
+    font-size: 2.5vh;
+    width: 80%;
+    border: none;
+    padding: 5px;
+    background: #5c5c5ca1;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid rgb(83, 83, 83);
+    resize: none;
+}
+
+.info_register {
+
+    min-width: 300px;
+    width: 600px;
+    height: 100%;
+}
+
+.info_register img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+/*aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+
+.head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.head__tittle {
+    display: inline-block;
+    height: 110px;
+    background-color: rgb(149, 72, 0);
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 500px;
+
+}
+
+.head__tittle h1 {
+    color: black;
+    font-size: 60px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
+.head__info {
+    width: 350px;
+    min-width: 250px;
+    padding-right: 30px;
+    padding-left: 30px;
+    
+}
+
+.head__info_item {
+    height: 50%;
+    text-align: center;
+}
+
+.head__info_item h2 {
+    padding-top: 15px;
+    font-size: 28px;
+}
+
+.headClose {
+    right: 0;
+    top: 20px;
+    min-width: 250px;
+    padding-top: 20px;
+}
+
+.headClose button {
+    padding-right: 15px;
+    font-size: 30px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1113px) {
+
+    .panel__options {
+        width: 100%;
+    }
+
+
+    .headClose button {
+        padding: 4px 0 4px 0;
+        font-size: 27px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        width: 100%;
+        background-color: rgb(109, 0, 0);
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 865px) {
+    .head__tittle {
+        width: 100%;
+    
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .window_panel {
+        padding: 0;
+        padding-top: 20px;
+    }
+
+    .panel__item {
+        width: 100%;
+    }
+
+    .headClose {
+        padding-top: 20px;
+        width: 100%;
+    }
+
+    .headClose button {
+        padding-right: 15px;
+        font-size: 27px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        width: 100%;
+        background-color: rgb(109, 0, 0);
+    }
+
+    .head__tittle {
+        height: 100%;
+    
+    }
+    .fecha h2{
+        font-size: 21px;
+    }
+    .head__tittle h1{
+        font-size: 40px;
+    }
+}
+
+.tabla {
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.tabla span,
+h6 {
+    color: rgb(0, 0, 0);
+}
+
+.select {
+    background-color: rgb(215, 168, 168);
+}
+
+.drawer_head{
+    width: 235px;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.drawer_head img{
+    padding-left: 20px;
+    padding-top: 22px;
+    padding-bottom: 0;
+}
+
+.drawer{
+    padding-left: 15px;
+}
+
+.appBar{
+    background-color: rgb(39, 39, 39);
+}
+
+
+/*ffffffffffffffffffffffffffffffffffff*/
+
+select {
+    font-size: 22px;
+    background-color: black;
+    color: aliceblue;
+    border: none;
+    height: 38px;
+    border-radius: 5px;
+    width: 150px;
+}
+
+
+.display{
+    display: none;
+}
+
+.mini_menu option{
+    padding: 5px 7px;
+    border-bottom: 1px solid white !important;
+    cursor: pointer;
+}
+
+.mini_menu select{
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 940px) {
+    select {
+        font-size: 18px;
+        padding-top: 12px;
+        padding-left: 7px;
+    }
+}

@@ -1,0 +1,52 @@
+.info{
+    text-align: left;
+}
+
+.info h1{
+    font-size: 30px;
+    padding: 15px;
+    display: inline-block;
+}
+.info__item{
+    padding: 15px;
+    background-color: rgb(92, 92, 92);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+} 
+
+.info__item h4{
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.info__item p{
+    color: white;
+    display: inline-block;
+}
+
+.edit_btn button{
+    position: absolute;
+    right: 45px;
+    font-size: 19px;
+    color: rgb(223, 110, 95);
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 750px) {
+    .edit_btn{
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .edit_btn button{
+        right: 0;
+        left: 0;
+    }
+}
