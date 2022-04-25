@@ -66,7 +66,7 @@ export default function RegisterMembership() {
                 swal({
                     text: `Algo a salido mal`,
                     icon: "error",
-                    button: "Aceptarrr"
+                    button: "Aceptar"
                 })
             })
     }
