@@ -18,8 +18,8 @@ export default function RegisterClient() {
     function submitHandler(e) {
         e.preventDefault();
         const d = new Date();
-        let cad=d.toLocaleDateString();
-        let vec=cad.split("/");
+        let cad = d.toLocaleDateString();
+        let vec = cad.split("/");
         let fecha = `${vec[2]}-${vec[1].padStart(2, "0")}-${vec[0].padStart(2, "0")}`
 
         const cliente = {
@@ -130,7 +130,7 @@ export default function RegisterClient() {
 
                     <InputItem>
                         <TittleInput>Fecha de nacimiento:</TittleInput>
-                        <Input value={fechaNac.campo} onChange={(e)=>{ setFechaNac({...fechaNac, campo: e.target.value})}} required name="username" type="date" id="fecha_nac" placeholder="" />
+                        <Input value={fechaNac.campo} onChange={(e) => { setFechaNac({ ...fechaNac, campo: e.target.value }) }} required name="username" type="date" id="fecha_nac" placeholder="" />
                         <MessageError>Mensaje de error</MessageError>
                     </InputItem>
 
