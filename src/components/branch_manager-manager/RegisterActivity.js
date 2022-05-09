@@ -16,6 +16,8 @@ export default function AltaClase() {
     const [hraFin, setHraFin] = useState({ campo: '', valido: null });
     const [exito, setExito] = useState(null);
 
+    const [idActividad, setIdActividad] = useState();
+
     const loadDataMaestros = () => {
         axios.get('http://localhost:4000/maestros')
             .then(result => {
@@ -28,6 +30,22 @@ export default function AltaClase() {
                 setClase(result.data)
             })
     }
+    const loadId = () => {
+        const body = {
+            llave: 'id_actividad',
+            tabla: 'actividad'
+        }
+
+        axios.post('http://localhost:4000/load/id',body)
+            .then(result => {
+                console.log(result)
+                setIdActividad(result.data[0].id_actividad+1)
+            }).catch(resp => {
+                console.log(resp);
+            })
+    }
+
+    useEffect(loadId, [])
     useEffect(loadDataMaestros, [])
     useEffect(loadDataClases, [])
 
@@ -36,6 +54,7 @@ export default function AltaClase() {
 
 
         const actividad = {
+            id_actividad: idActividad,
             id_clase: e.target.elements.id_clase.value,
             id_maestro: e.target.elements.id_maestro.value,
             cupos: e.target.elements.cupos.value,
@@ -121,6 +140,7 @@ export default function AltaClase() {
                     icon: "success",
                     button: "Aceptar"
                 })
+                setIdActividad(idActividad+1)
             })
             .catch(({ response }) => {
                 console.log(response)
@@ -144,6 +164,8 @@ export default function AltaClase() {
                 <Tittle>Alta de una Actividad</Tittle>
                 <InputsContainer>
                     <InputItem>
+                        <TittleInput><b>ID de actividad: {idActividad}</b></TittleInput>
+                        <br />
                         <TittleInput>Clase:</TittleInput>
                         <Select name="id_clase">
                             {clase.map((user, index) => (
