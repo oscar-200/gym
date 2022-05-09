@@ -4,6 +4,7 @@ import axios from "axios";
 import { Form, InputsContainer, TittleInput, InputItem, Input, MessageError, Button, MessageNoGood, Tittle } from '../../elements/Forms';
 import ComponentInput from '../../elements/Input';
 import swal from 'sweetalert';
+import LoadId from './../../elements/LoadId'
 
 
 export default function RegisterClient() {
@@ -15,6 +16,8 @@ export default function RegisterClient() {
     const [fechaNac, setFechaNac] = useState({ campo: '', valido: 'true' });
     const [exito, setExito] = useState(null);
 
+    const [idCliente, setIdCliente] = useState();
+
     function submitHandler(e) {
         e.preventDefault();
         const d = new Date();
@@ -23,6 +26,7 @@ export default function RegisterClient() {
         let fecha = `${vec[2]}-${vec[1].padStart(2, "0")}-${vec[0].padStart(2, "0")}`
 
         const cliente = {
+            id: idCliente,
             nombre: e.target.elements.nombre.value,
             domicilio: e.target.elements.domicilio.value,
             telefono: e.target.elements.telefono.value,
@@ -39,6 +43,7 @@ export default function RegisterClient() {
             contrasenia.valido === 'true'
         ) {
             saveData(cliente)
+            setExito('true')
         } else {
             setExito('false');
         }
@@ -59,6 +64,7 @@ export default function RegisterClient() {
                 setCorreo({ campo: '', valido: '' })
                 setContrasenia({ campo: '', valido: '' })
                 setFechaNac({ campo: '', valido: '' })
+                setIdCliente(idCliente+1)
             })
             .catch(({ response }) => {
                 console.log(response)
@@ -85,6 +91,7 @@ export default function RegisterClient() {
     }
     return (
         <div className="panel__item">
+            <LoadId tittle='ID de cliente' llave='id_cliente' tabla='clientes' setDato={setIdCliente} dato={idCliente}/>
             <Form onSubmit={submitHandler}>
                 <Tittle>Registrar Cliente</Tittle>
                 <InputsContainer>

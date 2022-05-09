@@ -249,9 +249,9 @@ export default function RegisterPayment() {
                         <Tittle>Registrar pago</Tittle>
                         <InputsContainer>
                             <InputItem>
+                                <LoadId tittle='ID de pago' llave='id_pago' tabla='pagos_clientes' setDato={setIdPago} dato={idPago}/>
                                 <Dato><b>Id Cliente:</b>{` ${cliente.id_cliente}`}</Dato>
                                 <Dato><b>Nombre:</b>{' ' + cliente.nombre_cliente}</Dato>
-                                <LoadId tittle='ID de pago' llave='id_pago' tabla='pagos_clientes' setDato={setIdPago} dato={idPago}/>
                                 <br />
                                 <br />
                                 <TittleInput>Duracion:</TittleInput>
