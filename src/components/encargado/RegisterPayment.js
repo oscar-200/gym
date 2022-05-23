@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import "../../css/homeGerent.css";
-import { OptionsContainer, OptionMenu } from './../../elements/Options'
-import { Form, InputsContainer, TittleInput, InputItem, Input, Select, Option, MessageError, Button, MessageNoGood, Tittle } from './../../elements/Forms';
+import { Form, InputsContainer, TittleInput, InputItem, Select, Option, Button, MessageNoGood, Tittle } from './../../elements/Forms';
 import { Dato, Separador } from './paymentElements/Info'
 import ComponentInput from '../../elements/Input';
 import ComponentInputTotal from '../../elements/InputTotal';
